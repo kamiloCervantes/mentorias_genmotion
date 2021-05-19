@@ -6,6 +6,8 @@ En el marco del programa Mision TIC 2022 nos ayudamos mutuamente para comprender
 
 No es recomendable subir estos videos o parte de ellos a ninguna plataforma o red social debido a las restricciones de copyright que fueron manifestadas al iniciar el curso. Aquellos que suban contenido de este repositorio a redes podria enfrentar alguna sanción por motivo de violacion de copyright por parte de los creadores del curso de Mision TIC. Mejor no demos papaya.
 
+# *Tener en cuenta que el acceso a los archivos esta habilitado para cuentas institucionales de Uninorte*
+
 
 2021-05-07 
 
