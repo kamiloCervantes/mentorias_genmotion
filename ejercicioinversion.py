@@ -14,8 +14,12 @@ nummeses = int(input())
 valorfinal = inversion
 
 for i in range(nummeses):
+    print("-----Mes ",i)
+    print("Base: ", valorfinal)
     ganancia = valorfinal * 0.02
+    print("Ganancia: ", ganancia)
     valorfinal = valorfinal + ganancia
+    print("El valor del mes es de ", valorfinal)
 
 print("El valor final es de ", valorfinal)
 print("La ganancia fue de", valorfinal-inversion)
