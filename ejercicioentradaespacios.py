@@ -1,0 +1,8 @@
+print("Ingrese su entrada con espacios")
+entrada = input()
+lista = entrada.split(" ")
+print(lista[0])
+entrada2 = " ".join(lista)
+print(entrada2)
+entrada2comas = ",".join(lista)
+print(entrada2comas)
