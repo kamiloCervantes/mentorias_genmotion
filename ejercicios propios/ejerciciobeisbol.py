@@ -59,6 +59,7 @@ def homerun():
     global bases
     global runs
     print("---Impresionante! Un homerun!!---")
+    bases = bases + 1
     print("Felicidades!! Anotas",bases,"nuevas carreras!!!")
     runs = runs + bases
     bases = 0
@@ -82,7 +83,7 @@ def foul():
     global fouls
     print("--- Oh no es un foul por muy poco!! ---")
     fouls = fouls + 1
-    if(strikes < 3):
+    if(strikes < 2):
         strikes = strikes + 1
 
 def hit():
@@ -95,7 +96,7 @@ def hit():
     balls = 0
     hits = hits + 1
 
-def main():
+def main(debug):
     global outs
     global balls
     global strikes
@@ -110,6 +111,8 @@ def main():
         error = False
         direccion = 0
         potencia = 0
+        X = 0
+        Y = 0
           # movimiento de estadisticas
         if(balls == 4):
             balls = 0
@@ -140,12 +143,15 @@ def main():
         print("Pitcher lanza la pelota")
         print("Preparando swing de bateo")
         print("Seleccione la direccion del bateo\n1. Izquierda\n2. Centro\n3. Derecha")
-        direccion = int(input())
-        print("Indique la potencia del bateo (1-10)")
-        potencia = int(input())
+        if(not debug):
+            direccion = int(input())
+            print("Indique la potencia del bateo (1-10)")
+            potencia = int(input())
         # mostrar resultado de lanzamiento 
         X = random.randint(0,100)
-        print(X)
+        if(debug):
+            X=10
+            direccion=1
         if(X > 0 and X <= 15):
             balls = balls +1
             print("Arbitro dice: Ball!")
@@ -160,6 +166,9 @@ def main():
     
         # mostrar resultado bateo    
         Y = random.randint(0,100)
+        if(debug):
+            Y=50
+            potencia=7
         if(potencia >= 1 and potencia <= 10):
             if(direccion == 1 or direccion == 3):
                 if((Y >= 90 and Y <= 100) and potencia >= 9):
@@ -200,4 +209,4 @@ def main():
 
       
     
-main()
+main(True)
